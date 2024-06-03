@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 set(PATCH_VERSION "5" CACHE INTERNAL "Patch version")
 set(PROJECT_VESRION 0.0.${PATCH_VERSION})
 
-project(async VERSION ${PROJECT_VESRION})
+project(async_cli VERSION ${PROJECT_VESRION})
 
 add_executable(async_cli main.cpp)
 add_library(bulklib bulk.cpp)
@@ -51,7 +51,7 @@ else ()
     )
 endif()
 
-install(TARGETS async RUNTIME DESTINATION bin)
+install(TARGETS async_cli RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
