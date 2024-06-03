@@ -6,7 +6,6 @@ int main(int argc, char const *argv[])
   long N = 3;
   if(argc > 1)
     N = atoi (argv [1]);
-  
   auto context = connect(N);
   std::string firstCom = "vfdkl";
   receive(firstCom.c_str(), firstCom.size(), context);
@@ -21,6 +20,5 @@ int main(int argc, char const *argv[])
   firstCom = "5bvfd";
   receive(firstCom.c_str(), firstCom.size(), context);
   disconnect(context);
-  
   return 0;
 }
